@@ -1,0 +1,31 @@
+import java.util.*;
+public class Task1 {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        Boolean c = true;        
+        while (c == true){
+        System.out.println("Choose the mathematical operation :");
+        System.out.println(" 1-Addition\n 2-Multiplication \n 3-Division\n 4-Subtraction\n 5-Remainder");
+       int a= sc.nextInt();
+       System.out.println("Enter the two numbers");
+       float x= sc.nextFloat();
+       float y= sc.nextFloat();
+       if (a==1)
+           System.out.println(x+y);
+       else if (a==2)
+           System.out.println(x*y);
+       else if (a==3)
+            try {
+           System.out.println(x/y);}
+       catch (ArithmeticException e) {
+           System.out.println("Can't divide by zero");}
+      else if (a==4)
+           System.out.println(x-y);
+      else 
+           System.out.println(x%y);
+    
+    System.out.println("Do you want to do another operation?"); 
+      c=sc.nextBoolean();
+        }
+}
+}
